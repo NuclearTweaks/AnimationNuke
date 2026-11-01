@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>cell</key>
+		<string>PSGroupSpecifier</string>
+		<key>footerText</key>
+		<string>Speed: 1.0× — stock iOS. Drag right to crush animations, left to savor them.</string>
+	</dict>
+	<dict>
+		<key>cell</key>
+		<string>PSSliderCell</string>
+		<key>label</key>
+		<string>Animation speed</string>
+		<key>min</key>
+		<real>0</real>
+		<key>max</key>
+		<real>100</real>
+		<key>step</key>
+		<integer>1</integer>
+		<key>Get</key>
+		<string>readSpeedPos:</string>
+		<key>Set</key>
+		<string>writeSpeed:forSpecifier:</string>
+	</dict>
+	<dict>
+		<key>cell</key>
+		<string>PSGroupSpecifier</string>
+		<key>footerText</key>
+		<string>0.5× = half speed (slow motion). 100× = animations effectively instant. Affects app open/close/switch, lock screen dismiss, scroll bounces and every other decorative animation, system-wide. Applies live in all apps — no respring.</string>
+	</dict>
+</array>
+</plist>

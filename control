@@ -3,7 +3,10 @@ Name: AnimationNuke
 Version: 1.0.0
 Architecture: iphoneos-arm64
 Depends: mobilesubstrate, firmware (>= 15.0)
+Recommends: preferenceloader
 Maintainer: Spec
 Author: Spec
-Description: Nukes the wait: scale every decorative UI animation 0.5x–100x.
+Description: Scale decorative UI animations from 0.5x to 100x — app
+ open/close/switch, lock-screen dismiss, scroll bounce. Slider in Settings;
+ 100x makes them effectively instant. Applies live, no respring needed.
 Section: Tweaks
