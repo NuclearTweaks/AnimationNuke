@@ -1,0 +1,9 @@
+Package: com.nucleartweaks.animation-nuke
+Name: AnimationNuke
+Version: 1.0.0
+Architecture: iphoneos-arm64
+Depends: mobilesubstrate, firmware (>= 15.0)
+Maintainer: Spec
+Author: Spec
+Description: Nukes the wait: scale every decorative UI animation 0.5x–100x.
+Section: Tweaks
