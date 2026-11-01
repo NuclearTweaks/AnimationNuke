@@ -41,14 +41,13 @@ Sub-1ms durations snap instead of animating — at 100× there is simply nothing
 
 ## Testing in the jailbroken iOS 27 simulator
 
-The iOS 27 *simulator* loader only implements the `Bundles` filter key with
-`SELF ENDSWITH <item>` matching (no `Classes`; bare strings match only the
-empty suffix). For local sim runs, temporarily swap the filter in
-`AnimationNuke.plist` to `{ Filter = { Bundles = ( com.apple.springboard ); }; }`.
-Do **not** ship that — on-device ElleKit needs the `Classes = ( UIApplication )`
-form so apps get the tweak too. Load/scale proof in the sim:
-`/Users/spencer/animationnuke-proof.txt` on the Mac host (path exists only in
-the JB-sim setup; on real devices the write silently fails).
+The production filter (`Classes = ( UIApplication )`) loads fine on the JB sim —
+ship it unchanged. Two sim quirks: the guest unified log doesn't surface tweak
+logging, so load/scale proof lands in `/Users/spencer/animationnuke-proof.txt`
+on the Mac host (path absent on device → write fails silently there); and any
+injected crash arms `/private/var/tmp/.injection_safemode` (guest FS), which
+silently disables ALL injection until deleted — if the tweak "won't load",
+check that flag first, then full shutdown→jb.sh→boot if SpringBoard is wedged.
 
 ## Development
 
